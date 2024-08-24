@@ -50,7 +50,7 @@ const IceCreamWishForm = ({ onSubmit, onClose }) => {
           Add Your Ice Cream Wish
         </Typography>
         <Typography variant="body2" gutterBottom sx={{ color: '#610023', mb: 2 }}>
-          Share what you&apos;d love to see in our Gelato Joy!
+          Share what you would love to see in our Gelato Joy!
         </Typography>
         <form onSubmit={handleSubmit}>
           <TextField
