@@ -1,0 +1,294 @@
+{
+  "ice_creams": [
+    {
+      "name": "Stracciatella Delight",
+      "stars": 4.8,
+      "flavors": [
+        "vanilla",
+        "chocolate chips"
+      ],
+      "review": "A classic Italian favorite. The perfect balance of creamy vanilla and crunchy chocolate chips."
+    },
+    {
+      "name": "Pistachio Paradise",
+      "stars": 4.7,
+      "flavors": [
+        "pistachio"
+      ],
+      "review": "Authentic Sicilian pistachio flavor. Rich, nutty, and not too sweet."
+    },
+    {
+      "name": "Tiramisu Dream",
+      "stars": 4.9,
+      "flavors": [
+        "coffee",
+        "mascarpone",
+        "cocoa"
+      ],
+      "review": "Tastes just like the dessert! The coffee flavor is strong but not overpowering."
+    },
+    {
+      "name": "Fragola Fresca",
+      "stars": 4.6,
+      "flavors": [
+        "strawberry"
+      ],
+      "review": "Made with fresh strawberries. Tastes like summer in a scoop!"
+    },
+    {
+      "name": "Nocciola Nirvana",
+      "stars": 4.8,
+      "flavors": [
+        "hazelnut"
+      ],
+      "review": "Intense hazelnut flavor. Creamy and indulgent."
+    },
+    {
+      "name": "Limoncello Zest",
+      "stars": 4.5,
+      "flavors": [
+        "lemon",
+        "limoncello"
+      ],
+      "review": "Refreshing and tangy. You can taste the limoncello liqueur!"
+    },
+    {
+      "name": "Cioccolato Fondente",
+      "stars": 4.7,
+      "flavors": [
+        "dark chocolate"
+      ],
+      "review": "Rich and intense dark chocolate flavor. Not too sweet, perfect for chocolate lovers."
+    },
+    {
+      "name": "Amarena Cherry Bliss",
+      "stars": 4.6,
+      "flavors": [
+        "cream",
+        "amarena cherries"
+      ],
+      "review": "Creamy base with swirls of amarena cherry. The cherries add a delightful tartness."
+    },
+    {
+      "name": "Fior di Latte Purity",
+      "stars": 4.5,
+      "flavors": [
+        "milk cream"
+      ],
+      "review": "Simple yet delicious. The pure taste of high-quality milk and cream."
+    },
+    {
+      "name": "Bacio Blast",
+      "stars": 4.8,
+      "flavors": [
+        "chocolate",
+        "hazelnut"
+      ],
+      "review": "Inspired by Bacio chocolates. Perfect blend of chocolate and hazelnut."
+    },
+    {
+      "name": "Mango Tango",
+      "stars": 4.6,
+      "flavors": [
+        "mango"
+      ],
+      "review": "Tastes like fresh mangoes. Creamy and fruity, perfect for hot days."
+    },
+    {
+      "name": "Zabaione Zenith",
+      "stars": 4.7,
+      "flavors": [
+        "egg custard",
+        "marsala wine"
+      ],
+      "review": "Rich and boozy. The marsala wine adds a unique depth of flavor."
+    },
+    {
+      "name": "Mint Chip Madness",
+      "stars": 4.5,
+      "flavors": [
+        "mint",
+        "chocolate chips"
+      ],
+      "review": "Refreshing mint with dark chocolate chips. A classic combination done right."
+    },
+    {
+      "name": "Caramel Swirl Sensation",
+      "stars": 4.6,
+      "flavors": [
+        "caramel",
+        "vanilla"
+      ],
+      "review": "Creamy vanilla base with ribbons of salted caramel. Indulgent and satisfying."
+    },
+    {
+      "name": "Coconut Bliss",
+      "stars": 4.4,
+      "flavors": [
+        "coconut"
+      ],
+      "review": "Tastes like a tropical vacation. Made with real coconut cream."
+    },
+    {
+      "name": "Malaga Raisin Rum",
+      "stars": 4.5,
+      "flavors": [
+        "rum",
+        "raisins"
+      ],
+      "review": "Rum-soaked raisins in a creamy base. A grown-up flavor that's not too boozy."
+    },
+    {
+      "name": "Berries & Cream",
+      "stars": 4.7,
+      "flavors": [
+        "mixed berries",
+        "cream"
+      ],
+      "review": "A medley of fresh berries in a sweet cream base. Fruity and refreshing."
+    },
+    {
+      "name": "Ricotta & Fig Fantasy",
+      "stars": 4.6,
+      "flavors": [
+        "ricotta",
+        "fig"
+      ],
+      "review": "Creamy ricotta base with chunks of candied figs. A unique and delicious combination."
+    },
+    {
+      "name": "Espresso Jolt",
+      "stars": 4.8,
+      "flavors": [
+        "coffee"
+      ],
+      "review": "Intense coffee flavor. Made with freshly brewed espresso for a real kick."
+    },
+    {
+      "name": "Cassata Siciliana",
+      "stars": 4.7,
+      "flavors": [
+        "candied fruit",
+        "nuts",
+        "chocolate"
+      ],
+      "review": "Inspired by the traditional Sicilian dessert. A complex flavor with every bite."
+    },
+    {
+      "name": "Vanilla Bean Supreme",
+      "stars": 4.5,
+      "flavors": [
+        "vanilla"
+      ],
+      "review": "Simple but perfect. Made with real vanilla beans for an intense flavor."
+    },
+    {
+      "name": "Salted Pretzel Crunch",
+      "stars": 4.6,
+      "flavors": [
+        "salted caramel",
+        "pretzel pieces"
+      ],
+      "review": "Sweet and salty perfection. The pretzel pieces add a satisfying crunch."
+    },
+    {
+      "name": "Affogato Allure",
+      "stars": 4.8,
+      "flavors": [
+        "vanilla",
+        "coffee"
+      ],
+      "review": "Vanilla ice cream with a coffee ripple. Tastes like the classic Italian dessert."
+    },
+    {
+      "name": "Panna Cotta Pleasure",
+      "stars": 4.7,
+      "flavors": [
+        "cream",
+        "vanilla",
+        "caramel"
+      ],
+      "review": "Inspired by the Italian dessert. Creamy and indulgent with a caramel swirl."
+    },
+    {
+      "name": "Torroncino Treat",
+      "stars": 4.6,
+      "flavors": [
+        "nougat",
+        "honey",
+        "nuts"
+      ],
+      "review": "Based on the Italian nougat candy. Honey-sweet with crunchy nut pieces."
+    },
+    {
+      "name": "Gianduia Gem",
+      "stars": 4.8,
+      "flavors": [
+        "chocolate",
+        "hazelnut"
+      ],
+      "review": "The famous Turin chocolate in ice cream form. Rich and nutty."
+    },
+    {
+      "name": "Zuppa Inglese Zest",
+      "stars": 4.5,
+      "flavors": [
+        "custard",
+        "sponge cake",
+        "alchermes liqueur"
+      ],
+      "review": "Based on the classic Italian trifle. A complex flavor with a hint of liqueur."
+    },
+    {
+      "name": "Crema Catalana Crisp",
+      "stars": 4.7,
+      "flavors": [
+        "vanilla custard",
+        "caramel"
+      ],
+      "review": "Inspired by the Spanish dessert. Creamy custard flavor with a caramel crunch."
+    },
+    {
+      "name": "Pistacchio di Bronte DOP",
+      "stars": 4.9,
+      "flavors": [
+        "pistachio"
+      ],
+      "review": "Made with premium pistachios from Bronte, Sicily. Intense, pure pistachio flavor."
+    },
+    {
+      "name": "Mascarpone Madness",
+      "stars": 4.6,
+      "flavors": [
+        "mascarpone cheese"
+      ],
+      "review": "Rich and creamy, tastes like frozen cheesecake. Indulgent and satisfying."
+    },
+    {
+      "name": "tolia",
+      "flavors": [
+        "chocolate"
+      ],
+      "review": "yummy",
+      "stars": "New Wish"
+    },
+    {
+      "name": "escimo",
+      "flavors": [
+        "chocolate"
+      ],
+      "review": "yummy",
+      "stars": "New Wish"
+    },
+    {
+      "name": "Algida",
+      "flavors": [
+        "cone",
+        " chocolate",
+        " nuts"
+      ],
+      "review": "delicious",
+      "stars": "New Wish"
+    }
+  ]
+}
