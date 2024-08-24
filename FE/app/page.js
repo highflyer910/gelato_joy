@@ -157,7 +157,7 @@ export default function Home() {
                 disabled={isLoading}
                 fullWidth
               >
-                {isLoading ? 'Scooping up answers...' : 'Ask me!'}
+                {isLoading ? "Scooping up answers..." : "Ask me!"}
               </StyledButton>
             </form>
             <StyledButton 
