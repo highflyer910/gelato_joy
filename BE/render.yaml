@@ -1,0 +1,9 @@
+services:
+  - name: app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    # Optional: If you need environment variables, you can add them here
+    # envVars:
+    #   - key: YOUR_ENV_VAR
+    #     value: your_value
