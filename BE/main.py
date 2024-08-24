@@ -17,9 +17,15 @@ load_dotenv()
 app = FastAPI()
 
 # Add CORS middleware
+origins = [
+    "https://gelato-joy.vercel.app",  # Your frontend domain
+    "http://localhost:3000",          # For local development (if needed)
+    # Add more origins if needed
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://gelato-joy.vercel.app/"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
