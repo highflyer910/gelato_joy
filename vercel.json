@@ -19,8 +19,8 @@
         "dest": "FE/.next/$1"
       }
     ],
-    "buildCommand": "cd FE && next build",
-    "outputDirectory": "FE/.next",
-    "framework": "nextjs"
+    "buildCommand": "npm --prefix FE run build",
+  "outputDirectory": "FE/.next",
+  "framework": "nextjs"
   }
   
