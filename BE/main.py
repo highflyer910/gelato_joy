@@ -19,8 +19,9 @@ app = FastAPI()
 # Add CORS middleware
 origins = [
     "https://gelato-joy.vercel.app",  
-    "http://localhost:3000",          
-    # Add more origins if needed
+    "http://localhost:3000",
+    "https://gelato-joy-t765.onrender.com"
+
 ]
 
 app.add_middleware(
