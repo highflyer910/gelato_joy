@@ -289,6 +289,14 @@
       ],
       "review": "delicious",
       "stars": "New Wish"
+    },
+    {
+      "name": "Barambino",
+      "flavors": [
+        "chocolate"
+      ],
+      "review": "In cups, yummy",
+      "stars": "New Wish"
     }
   ]
 }

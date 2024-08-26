@@ -18,8 +18,8 @@ app = FastAPI()
 
 # Add CORS middleware
 origins = [
-    "https://gelato-joy.vercel.app",  # Your frontend domain
-    "http://localhost:3000",          # For local development (if needed)
+    "https://gelato-joy.vercel.app",  
+    "http://localhost:3000",          
     # Add more origins if needed
 ]
 
@@ -52,7 +52,6 @@ ice_creams = data.get('ice_creams', [])
 # Initialize the sentence transformer model
 model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
 
-# Initialize Pinecone
 # Initialize Pinecone
 pc = Pinecone(api_key=os.getenv('PINECONE_API_KEY'))
 
@@ -257,5 +256,6 @@ async def add_ice_cream_wish(payload: dict = Body(...)):
         return JSONResponse(status_code=500, content={"error": str(e)})
 
 if __name__ == "__main__":
+    import uvicorn
     port = int(os.getenv("PORT", 8000))  # Default to 8000 if PORT is not set
     uvicorn.run(app, host="0.0.0.0", port=port)
