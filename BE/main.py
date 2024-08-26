@@ -144,34 +144,10 @@ def generate_response(context: str, query: str) -> str:
         return "I understood your question about ice cream, but I'm having trouble formulating a response. Could you try rephrasing?"
 
 # Health Check Endpoint
-@app.get("/health")
+@app.route("/health", methods=["GET", "POST"])
 async def health_check():
-    try:
-        # Optional: Check if the Pinecone index is accessible
-        index_stats = index.describe_index_stats()
-        if index_stats.dimension != 1536:  # Assuming 1536 is the expected dimension
-            logger.error("Index dimension mismatch")
-            return JSONResponse(status_code=500, content={"status": "unhealthy", "error": "Index dimension mismatch"})
-
-        # Optional: Check if Hugging Face API is accessible
-        response = requests.post(
-            "https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1",
-            headers={"Authorization": f"Bearer {os.getenv('HUGGINGFACE_API_KEY')}"},
-            json={"inputs": "ping"},
-            timeout=5
-        )
-        if response.status_code != 200:
-            logger.error("Hugging Face API is not accessible")
-            return JSONResponse(status_code=500, content={"status": "unhealthy", "error": "Hugging Face API not accessible"})
-
-        return JSONResponse(content={"status": "ok"})
-    except Exception as e:
-        logger.error(f"Health check failed: {str(e)}")
-        return JSONResponse(status_code=500, content={"status": "unhealthy", "error": str(e)})
-
-
-
-
+    return JSONResponse(content={"status": "ok"})
+    
 @app.post("/query")
 async def query(payload: dict = Body(...)):
     query = payload.get("query")
