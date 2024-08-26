@@ -74,7 +74,7 @@ export default function Home() {
   const [aiResponse, setAiResponse] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [openModal, setOpenModal] = useState(false)
-  const [showSuccessModal, setShowSuccessModal] = useState(false) // State for the success modal
+  const [showSuccessModal, setShowSuccessModal] = useState(false) 
   const [successMessage, setSuccessMessage] = useState('') 
 
   const handleSubmit = async (e) => {
@@ -163,7 +163,7 @@ export default function Home() {
                 disabled={isLoading}
                 fullWidth
               >
-                {isLoading ? "Scooping up answers..." : "Ask me!"}
+                {isLoading ? "Thinking..." : "Ask me!"}
               </StyledButton>
             </form>
             <StyledButton 
@@ -212,7 +212,7 @@ export default function Home() {
       </Container>
       <Modal
         open={openModal}
-        onClose={() => setOpenModal(false)} // This will close the modal when clicking outside
+        onClose={() => setOpenModal(false)} 
         aria-labelledby="ice-cream-wish-modal"
         aria-describedby="modal-to-add-ice-cream-wish"
       >
