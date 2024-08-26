@@ -114,9 +114,16 @@ def generate_response(context: str, query: str) -> str:
         logger.error(f"Error generating response: {e}")
         return "I'm having trouble connecting to my knowledge base right now. How about we chat about something else ice cream related?"
 
-@app.route("/health", methods=["GET", "POST"])
-async def health_check():
-    return JSONResponse(content={"status": "ok"})
+app.route("/health", methods=["GET", "HEAD"])
+async def health_check(request: Request):
+    try:
+        if request.method == "HEAD":
+            return Response(status_code=200)
+        
+        return JSONResponse(content={"status": "ok"})
+    except Exception as e:
+        logger.error(f"Health check failed: {str(e)}")
+        return Response(status_code=500)
 
 @app.post("/query")
 async def query(payload: dict = Body(...)):
