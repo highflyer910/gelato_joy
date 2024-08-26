@@ -84,7 +84,7 @@ export default function Home() {
       const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/query`, { query })
   
       if (response.data) {
-        console.log('Response data:', response.data);  // Log the entire response
+        console.log('Response data:', response.data);  
         setResults(response.data.results || [])
         setAiResponse(response.data.ai_response || 'No response from AI')
       } else {
@@ -94,7 +94,7 @@ export default function Home() {
       }
     } catch (error) {
       console.error('Error querying the backend:', error)
-      console.error('Error response:', error.response?.data)  // Log the error response if available
+      console.error('Error response:', error.response?.data)  
       setResults([])
       setAiResponse('Error: Unable to fetch AI response')
     } finally {
@@ -109,17 +109,17 @@ export default function Home() {
       console.log('Response from server:', response.data);
       if (response.data && response.data.message) {
         setSuccessMessage(response.data.message)
-        setShowSuccessModal(true) // Show success modal
+        setShowSuccessModal(true) 
         setOpenModal(false)
       } else {
         console.error('Unexpected response structure:', response.data)
         setSuccessMessage('Unexpected response from server. Please try again.')
-        setShowSuccessModal(true) // Show success modal
+        setShowSuccessModal(true) 
       }
     } catch (error) {
       console.error('Error adding ice cream wish:', error.response ? error.response.data : error.message)
       setSuccessMessage('Failed to add ice cream wish. Please try again.')
-      setShowSuccessModal(true) // Show success modal
+      setShowSuccessModal(true) 
     }
   }
 
@@ -149,6 +149,12 @@ export default function Home() {
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="What ice cream flavor are you curious about?"
                 multiline
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    handleSubmit(e);
+                  }
+                }}
                 sx={{ mb: 2 }}
               />
               <StyledButton 
