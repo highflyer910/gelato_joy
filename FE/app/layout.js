@@ -1,5 +1,6 @@
 import { Fredoka } from 'next/font/google'
 import ThemeRegistry from './ThemeRegistry'
+import { Analytics } from "@vercel/analytics/react"
 
 const fredoka = Fredoka({ subsets: ['latin'] })
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
       <body className={fredoka.className}>
         <ThemeRegistry>
           {children}
+          <Analytics />
         </ThemeRegistry>
       </body>
     </html>
