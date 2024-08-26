@@ -114,7 +114,7 @@ def generate_response(context: str, query: str) -> str:
     payload = {
         "inputs": prompt,
         "parameters": {
-            "max_length": 150,
+            "max_length": 500,
             "temperature": 0.7,
             "top_p": 0.9,
         }
@@ -124,21 +124,23 @@ def generate_response(context: str, query: str) -> str:
         response = requests.post(API_URL, headers=headers, json=payload, timeout=10)
         response.raise_for_status()
         full_response = response.json()[0]['generated_text']
+        logger.info(f"Full response from API: {full_response}")
         
         # Extract only the Assistant's response
         assistant_response = full_response.split("Assistant:")[-1].strip()
         assistant_response = assistant_response.split("Human:")[0].strip()
+
+        if not assistant_response:
+            return "I seem to have missed part of my response. Let me try again!"
         return assistant_response
     except requests.Timeout:
         logger.error("Request to Hugging Face API timed out")
         return "I'm sorry, it's taking longer than expected to respond. Could you please try again?"
     except requests.RequestException as e:
         logger.error(f"Error making request to Hugging Face API: {e}")
-        logger.error(f"Response content: {e.response.content if e.response else 'No response'}")
         return "I'm having trouble connecting to my knowledge base right now. How about we chat about something else ice cream related?"
     except (KeyError, IndexError, json.JSONDecodeError) as e:
         logger.error(f"Error parsing response from Hugging Face API: {e}")
-        logger.error(f"Response content: {response.content}")
         return "I understood your question about ice cream, but I'm having trouble formulating a response. Could you try rephrasing?"
 
 @app.post("/query")

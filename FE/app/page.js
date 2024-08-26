@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import axios from 'axios'
-import IceCreamWishForm from './components/IceCreamWishForm';
-import SuccessModal from './components/SuccessModal';
+import IceCreamWishForm from './components/IceCreamWishForm'
+import SuccessModal from './components/SuccessModal'
 import { 
   Container, 
   Typography, 
@@ -25,7 +25,7 @@ const BackgroundContainer = styled(Box)({
   minHeight: '100vh',
   width: '100%',
   padding: '2rem 0',
-});
+})
 
 const ContentContainer = styled(Paper)(({ theme }) => ({
   backgroundColor: '#FDEDE0',
@@ -35,7 +35,7 @@ const ContentContainer = styled(Paper)(({ theme }) => ({
   boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
   position: 'relative',
   overflow: 'visible',
-}));
+}))
 
 const MeltingIceCream = styled('div')({
   position: 'absolute',
@@ -48,25 +48,25 @@ const MeltingIceCream = styled('div')({
   backgroundPosition: 'center top',
   backgroundRepeat: 'no-repeat',
   zIndex: 1,
-});
+})
 
 const ContentWrapper = styled(Box)({
   position: 'relative',
   zIndex: 2,
   paddingTop: '160px',
-});
+})
 
 const HeaderSection = styled(Box)({
   backgroundColor: 'transparent',
   paddingTop: '0px',
-});
+})
 
 const StyledButton = styled(Button)({
   backgroundColor: '#F37576',
   '&:hover': {
     backgroundColor: '#E56565',
   },
-});
+})
 
 export default function Home() {
   const [query, setQuery] = useState('')
@@ -82,19 +82,9 @@ export default function Home() {
     setIsLoading(true)
     try {
       const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/query`, { query })
-  
-      if (response.data) {
-        console.log('Response data:', response.data);  
-        setResults(response.data.results || [])
-        setAiResponse(response.data.ai_response || 'No response from AI')
-      } else {
-        console.error('Unexpected response structure:', response.data)
-        setResults([])
-        setAiResponse('Unexpected response structure')
-      }
+      setResults(response.data.results || [])
+      setAiResponse(response.data.ai_response || 'No response from AI')
     } catch (error) {
-      console.error('Error querying the backend:', error)
-      console.error('Error response:', error.response?.data)  
       setResults([])
       setAiResponse('Error: Unable to fetch AI response')
     } finally {
@@ -106,24 +96,20 @@ export default function Home() {
   const handleAddWish = async (formData) => {
     try {
       const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/add_ice_cream_wish`, formData)
-      console.log('Response from server:', response.data);
       if (response.data && response.data.message) {
         setSuccessMessage(response.data.message)
         setShowSuccessModal(true) 
         setOpenModal(false)
       } else {
-        console.error('Unexpected response structure:', response.data)
         setSuccessMessage('Unexpected response from server. Please try again.')
         setShowSuccessModal(true) 
       }
     } catch (error) {
-      console.error('Error adding ice cream wish:', error.response ? error.response.data : error.message)
       setSuccessMessage('Failed to add ice cream wish. Please try again.')
       setShowSuccessModal(true) 
     }
   }
 
-  
   return (
     <BackgroundContainer>
       <Container maxWidth="md">
@@ -151,8 +137,8 @@ export default function Home() {
                 multiline
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' && !e.shiftKey) {
-                    e.preventDefault();
-                    handleSubmit(e);
+                    e.preventDefault()
+                    handleSubmit(e)
                   }
                 }}
                 sx={{ mb: 2 }}

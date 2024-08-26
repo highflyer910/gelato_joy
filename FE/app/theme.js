@@ -56,16 +56,16 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: 12,
-          border: '1px solid #C27F79', // Add border to Paper components
+          border: '1px solid #C27F79', 
         },
       },
     },
     MuiListItem: {
       styleOverrides: {
         root: {
-          borderBottom: '1px solid #C27F79', // Add border to list items
+          borderBottom: '1px solid #C27F79', 
           '&:last-child': {
-            borderBottom: 'none', // Remove border from last list item
+            borderBottom: 'none', 
           },
         },
       },
