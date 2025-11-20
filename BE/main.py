@@ -84,7 +84,7 @@ df = pd.DataFrame(vectors)
 index.upsert(vectors=vectors)
 
 def call_huggingface_api(prompt):
-    API_URL = "https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1"
+    API_URL = "https://api-inference.huggingface.co/models/DevQuasar/mistralai.Mixtral-8x7B-Instruct-v0.1-GGUF"
     headers = {"Authorization": f"Bearer {HUGGINGFACE_API_KEY}"}
     payload = {
         "inputs": prompt,
